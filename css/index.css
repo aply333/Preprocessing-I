@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -133,4 +133,123 @@ table {
 html,
 body {
   height: 100%;
+}
+.container0 {
+  width: 750px;
+  margin: 1rem auto;
+}
+.section0 {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-top-left-radius: 24px;
+  display: flex;
+}
+hr {
+  margin-top: 1rem;
+}
+.container1 {
+  width: 750px;
+  margin: 1rem auto;
+}
+.container1 header {
+  margin: 1rem 1rem;
+}
+.container1 header nav {
+  margin-left: 55%;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+.container1 header nav a {
+  color: black;
+  text-decoration: none;
+}
+.container1 header nav a:hover {
+  text-decoration: underline;
+}
+.container1 .top-cont {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-top-left-radius: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: grey;
+}
+.container1 .top-cont img {
+  border-top-right-radius: 24px;
+  width: 50%;
+  border: solid black;
+}
+.container1 .top-cont .top-text {
+  width: 50%;
+  padding: 1.25rem;
+  text-align: center;
+}
+.container1 .top-cont .top-text h1 {
+  font-size: 2rem;
+}
+.container1 .top-cont .top-text h2 {
+  font-size: 1.5rem;
+}
+.container1 .top-cont .top-text p {
+  font-size: 1.25rem;
+}
+.container1 .top-cont .top-text a {
+  display: block;
+  margin: 1rem auto;
+  padding: 1.25rem;
+  width: 50%;
+  border-top-right-radius: 24px;
+  text-decoration: none;
+  color: white;
+  border: solid black;
+  background-color: darkorange;
+  font-size: 1.5rem;
+}
+.container1 .top-cont .top-text a:hover {
+  text-decoration: underline;
+}
+.container1 .middle-cont {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-top-left-radius: 24px;
+  display: flex;
+  background-color: orange;
+}
+.container1 .middle-cont h2 {
+  font-size: 1.5rem;
+}
+.container1 .middle-cont .about {
+  padding: 1.25rem;
+  width: 75%;
+}
+.container1 .middle-cont .about p {
+  margin-top: 1rem;
+}
+.container1 .middle-cont .the-goods {
+  padding: 1.25rem;
+}
+.container1 .middle-cont .the-goods ul {
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+}
+.container1 .bot-cont {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-top-left-radius: 24px;
+  display: flex;
+  flex-flow: column;
+  background-color: grey;
+}
+.container1 .bot-cont h1 {
+  font-size: 1.5rem;
+}
+.container1 .bot-cont hr {
+  width: 100%;
+}
+.container1 footer {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  text-align: center;
 }

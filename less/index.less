@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 	// background-color: red;
@@ -59,4 +59,142 @@ html, body {
 }
 //  My code starts here
 
+// Variables
+@top-gap:1rem;
 
+@box-background:grey;
+@box-back-alter:orange;
+
+@major-size:2rem;
+@secondary-size:1.5rem;
+@third-size:1.25rem;
+
+@bt-link:none;
+@bt-decor:underline;
+@bt-back:darkorange;
+
+@split-size:50%;
+@split-border:solid black;
+@split-uneven:75%;
+@split-remainder:25%;
+
+@gen-padding:1.25rem;
+@cont-btn-clr:white;
+@rounding:24px;
+
+// Generic Mixins
+.container0{
+	width: 750px;
+	margin: @top-gap auto;
+}
+.section0{
+	margin-top: @top-gap;
+	padding: @gen-padding;
+	border-top-left-radius: @rounding;
+	display: flex;
+}
+
+hr{
+	margin-top:@top-gap;
+}
+
+.container1{
+	.container0();
+	header{
+		margin: @top-gap 1rem;		
+		nav{
+			margin-left:55%;
+			width: 45%;
+			display: flex;
+			justify-content: space-between;
+			a {
+				color: black;
+				text-decoration: @bt-link;
+				&:hover{ 
+					text-decoration:@bt-decor;
+				}
+			}
+		}
+	}
+	.top-cont{
+		.section0();
+		justify-content: space-around;
+		align-items:center;
+		background-color: @box-background;
+		img{
+			border-top-right-radius: @rounding;
+			width:@split-size;
+			border: @split-border;
+		}
+		.top-text{
+			
+			width: @split-size;
+			padding: @gen-padding;
+			text-align: center;
+			h1{
+				font-size: @major-size;
+			}
+			h2{
+				font-size:@secondary-size;
+			}
+			p{
+				font-size: @third-size;
+			}
+			a{
+				display: block;
+				margin: @top-gap auto;
+				padding: @gen-padding;
+				width: @split-size;
+				border-top-right-radius: @rounding;
+				text-decoration: @bt-link;
+				color: @cont-btn-clr;
+				border: @split-border;
+				background-color:@bt-back;
+				font-size: @secondary-size;
+				&:hover{
+					text-decoration: @bt-decor;
+				}
+				
+			}
+		}
+	}
+	.middle-cont{
+		.section0();
+		background-color: @box-back-alter;
+		h2{
+			font-size: @secondary-size;
+		}
+		.about{
+			padding: @gen-padding;
+			width: @split-uneven;
+				p{
+					margin-top: @top-gap;
+				}
+		}
+		.the-goods{
+			padding: @gen-padding;
+			ul{
+				margin-top: @top-gap;
+				margin-left:@gen-padding;
+			}
+		}
+	}	
+	.bot-cont{
+		.section0();
+		flex-flow: column;
+		background-color: @box-background;
+		h1{
+			font-size: @secondary-size;
+		}
+		hr{
+			width: 100%;
+		}
+		.work-history{
+		}
+	}
+	footer{
+		margin-top: @top-gap;
+		padding: @gen-padding;
+		text-align: center;
+	}
+}
