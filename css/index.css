@@ -133,16 +133,31 @@ table {
 html,
 body {
   height: 100%;
+  background-image: url("../img/prism.png");
 }
-.container0 {
+.container-desktop {
   width: 750px;
   margin: 1rem auto;
 }
-.section0 {
+.container-mobile {
+  width: 100%;
+  margin: 1rem auto;
+}
+.section-box {
   margin-top: 1rem;
   padding: 1.25rem;
   border-top-left-radius: 24px;
   display: flex;
+}
+.button-basics {
+  border-top-right-radius: 24px;
+  text-decoration: none;
+  border: solid black 1px;
+  background-color: darkorange;
+  color: white;
+}
+.dropshadow {
+  box-shadow: 5px 7px 7px black;
 }
 hr {
   margin-top: 1rem;
@@ -156,12 +171,14 @@ hr {
 }
 .container1 header nav {
   margin-left: 55%;
-  width: 45%;
+  width: 55%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .container1 header nav a {
-  color: black;
+  font-size: 2rem;
+  font-family: 'Bebas Neue', cursive;
+  color: white;
   text-decoration: none;
 }
 .container1 header nav a:hover {
@@ -172,19 +189,21 @@ hr {
   padding: 1.25rem;
   border-top-left-radius: 24px;
   display: flex;
+  box-shadow: 5px 7px 7px black;
   justify-content: space-around;
   align-items: center;
-  background-color: grey;
+  background-color: lightgray;
 }
 .container1 .top-cont img {
   border-top-right-radius: 24px;
   width: 50%;
-  border: solid black;
+  border: solid black 1px;
 }
 .container1 .top-cont .top-text {
   width: 50%;
   padding: 1.25rem;
   text-align: center;
+  font-family: 'Bebas Neue', cursive;
 }
 .container1 .top-cont .top-text h1 {
   font-size: 2rem;
@@ -196,16 +215,17 @@ hr {
   font-size: 1.25rem;
 }
 .container1 .top-cont .top-text a {
-  display: block;
-  margin: 1rem auto;
-  padding: 1.25rem;
-  width: 50%;
   border-top-right-radius: 24px;
   text-decoration: none;
-  color: white;
-  border: solid black;
+  border: solid black 1px;
   background-color: darkorange;
+  color: white;
+  box-shadow: 5px 7px 7px black;
+  display: inline-block;
+  margin: 1rem auto;
+  padding: 1.25rem;
   font-size: 1.5rem;
+  width: 70%;
 }
 .container1 .top-cont .top-text a:hover {
   text-decoration: underline;
@@ -215,9 +235,11 @@ hr {
   padding: 1.25rem;
   border-top-left-radius: 24px;
   display: flex;
-  background-color: orange;
+  box-shadow: 5px 7px 7px black;
+  background-color: darkorange;
 }
 .container1 .middle-cont h2 {
+  font-family: 'Bebas Neue', cursive;
   font-size: 1.5rem;
 }
 .container1 .middle-cont .about {
@@ -225,31 +247,60 @@ hr {
   width: 75%;
 }
 .container1 .middle-cont .about p {
+  font-family: 'Teko', sans-serif;
   margin-top: 1rem;
 }
 .container1 .middle-cont .the-goods {
   padding: 1.25rem;
+  font-family: 'Teko', sans-serif;
 }
 .container1 .middle-cont .the-goods ul {
   margin-top: 1rem;
   margin-left: 1.25rem;
+  list-style-type: square;
 }
 .container1 .bot-cont {
   margin-top: 1rem;
   padding: 1.25rem;
   border-top-left-radius: 24px;
   display: flex;
+  box-shadow: 5px 7px 7px black;
   flex-flow: column;
-  background-color: grey;
+  background-color: lightgray;
 }
 .container1 .bot-cont h1 {
+  font-family: 'Bebas Neue', cursive;
   font-size: 1.5rem;
 }
 .container1 .bot-cont hr {
   width: 100%;
 }
+.container1 .bot-cont .work-history {
+  font-family: 'Teko', sans-serif;
+}
 .container1 footer {
+  border-top-left-radius: 24px;
+  display: flex;
+  box-shadow: 5px 7px 7px black;
   margin-top: 1rem;
   padding: 1.25rem;
   text-align: center;
+  background-color: darkorange;
+}
+@media (max-width: 500px) {
+  .container1 {
+    width: 100%;
+    margin: 1rem auto;
+  }
+  .container1 .header nav {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  .container1 .top-cont img {
+    display: none;
+  }
+  .container1 .top-cont .top-text {
+    width: 100%;
+  }
 }
