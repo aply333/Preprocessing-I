@@ -159,6 +159,16 @@ body {
 .dropshadow {
   box-shadow: 5px 7px 7px black;
 }
+.tab-border th {
+  margin-top: 1rem;
+  font-family: 'Righteous', cursive;
+  text-align: left;
+  border-bottom: solid black 2px;
+}
+.tab-border td {
+  height: 18px;
+  font-family: 'Teko', sans-serif;
+}
 hr {
   margin-top: 1rem;
 }
@@ -170,7 +180,7 @@ hr {
   margin: 1rem 1rem;
 }
 .container1 header nav {
-  margin-left: 55%;
+  margin-left: 45%;
   width: 55%;
   display: flex;
   justify-content: space-around;
@@ -197,7 +207,7 @@ hr {
 .container1 .top-cont img {
   border-top-right-radius: 24px;
   width: 50%;
-  border: solid black 1px;
+  border: inset black;
 }
 .container1 .top-cont .top-text {
   width: 50%;
@@ -275,17 +285,51 @@ hr {
 .container1 .bot-cont hr {
   width: 100%;
 }
-.container1 .bot-cont .work-history {
+.container1 .bot-cont .work-history th {
+  margin-top: 1rem;
+  font-family: 'Righteous', cursive;
+  text-align: left;
+  border-bottom: solid black 2px;
+}
+.container1 .bot-cont .work-history td {
+  height: 18px;
   font-family: 'Teko', sans-serif;
 }
-.container1 footer {
+.container1 .contact {
+  flex-flow: column;
+  margin-top: 1rem;
+  padding: 1.25rem;
   border-top-left-radius: 24px;
   display: flex;
   box-shadow: 5px 7px 7px black;
+  background-color: darkorange;
+}
+.container1 .contact h1 {
+  font-family: 'Teko', sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.container1 .contact #email {
+  color: black;
+}
+.container1 .contact #email .contact-info th {
+  margin-top: 1rem;
+  font-family: 'Righteous', cursive;
+  text-align: left;
+  border-bottom: solid black 2px;
+}
+.container1 .contact #email .contact-info td {
+  height: 18px;
+  font-family: 'Teko', sans-serif;
+}
+.container1 .contact footer {
   margin-top: 1rem;
   padding: 1.25rem;
+  border-top-left-radius: 24px;
+  display: flex;
+  box-shadow: 5px 7px 7px black;
   text-align: center;
-  background-color: darkorange;
+  background-color: lightgray;
 }
 @media (max-width: 500px) {
   .container1 {

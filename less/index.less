@@ -80,6 +80,8 @@ html, body {
 @split-uneven:75%;
 @split-remainder:25%;
 
+@img-border: inset black;
+
 @gen-padding:1.25rem;
 @cont-btn-clr:white;
 @rounding:24px;
@@ -114,6 +116,19 @@ html, body {
 .dropshadow{
 	box-shadow:5px 7px 7px black;
 }
+.tab-border{
+	th{
+		margin-top: @top-gap;
+		font-family: @font-minor;
+		text-align: left;
+		border-bottom: solid black 2px;
+	}
+	td{
+		height: 18px;
+		font-family: @font-alt
+		// border-bottom: solid grey 1px;
+	}
+}
 
 hr{
 	margin-top:@top-gap;
@@ -124,7 +139,7 @@ hr{
 	header{
 		margin: @top-gap 1rem;		
 		nav{
-			margin-left:55%;
+			margin-left:45%;
 			width: 55%;
 			display: flex;
 			justify-content: space-around;
@@ -148,7 +163,7 @@ hr{
 		img{
 			border-top-right-radius: @rounding;
 			width:@split-size;
-			border: @split-border;
+			border: @img-border;
 		}
 		.top-text{
 			
@@ -219,17 +234,35 @@ hr{
 			width: 100%;
 		}
 		.work-history{
+		.tab-border();	
+		}
+	}
+	.contact{
+		display: flex;
+		flex-flow: column;
+		.section-box();
+		.dropshadow();
+		background-color: @box-back-alter;
+		h1{
 			font-family: @font-alt;
+			font-size: @major-size;
+			text-decoration: none;
+		}
+		#email{
+			color: black;
+		.contact-info{
+			.tab-border();
 		}
 	}
 	footer{
 		.section-box();
 		.dropshadow();
-		margin-top: @top-gap;
-		padding: @gen-padding;
+		// margin-top: @top-gap;
+		// padding: @gen-padding;
 		text-align: center;
-		background-color:@box-back-alter;
+		background-color:@box-background;
 	}
+}
 }
 @media (max-width:500px){
 	.container1{
