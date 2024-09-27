@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -54,6 +54,234 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-image: url("../img/prism.png");
+	// background-repeat:repeat-x;
+}
+//  My code starts here
+
+// Variables
+@top-gap:1rem;
+
+@box-background:lightgray;
+@box-back-alter:darkorange;
+
+@major-size:2rem;
+@secondary-size:1.5rem;
+@third-size:1.25rem;
+@mega-size:2.5rem;
+
+@bt-link:none;
+@bt-decor:underline;
+@bt-back:darkorange;
+
+@split-size:50%;
+@split-border:solid black 1px;
+@split-uneven:75%;
+@split-remainder:25%;
+
+@img-border: inset black;
+
+@gen-padding:1.25rem;
+@cont-btn-clr:white;
+@rounding:24px;
+
+@font-major:'Bebas Neue', cursive;
+@font-minor:'Righteous', cursive;
+@font-alt:'Teko', sans-serif;
+
+
+// Generic Mixins
+.container-desktop{
+	width: 750px;
+	margin: @top-gap auto;
+}
+.container-mobile{
+	width:100%;
+	margin: @top-gap auto;
+}
+.section-box{
+	margin-top: @top-gap;
+	padding: @gen-padding;
+	border-top-left-radius: @rounding;
+	display: flex;
+}
+.button-basics{
+	border-top-right-radius: @rounding;
+	text-decoration: @bt-link;
+	border: @split-border;
+	background-color:@bt-back;
+	color: @cont-btn-clr;
+}
+.dropshadow{
+	box-shadow:5px 7px 7px black;
+}
+.tab-border{
+	th{
+		margin-top: @top-gap;
+		font-family: @font-minor;
+		text-align: left;
+		border-bottom: solid black 2px;
+	}
+	td{
+		height: 18px;
+		font-family: @font-alt
+		// border-bottom: solid grey 1px;
+	}
 }
 
+hr{
+	margin-top:@top-gap;
+}
+
+.container1{
+	.container-desktop();
+	header{
+		margin: @top-gap 1rem;		
+		nav{
+			margin-left:45%;
+			width: 55%;
+			display: flex;
+			justify-content: space-around;
+			a {	
+				font-size:@major-size;
+				font-family:@font-major;
+				color: white;
+				text-decoration: @bt-link;
+				&:hover{ 
+					text-decoration:@bt-decor;
+				}
+			}
+		}
+	}
+	.top-cont{
+		.section-box();
+		.dropshadow();
+		justify-content: space-around;
+		align-items:center;
+		background-color: @box-background;
+		img{
+			border-top-right-radius: @rounding;
+			width:@split-size;
+			border: @img-border;
+		}
+		.top-text{
+			
+			width: @split-size;
+			padding: @gen-padding;
+			text-align: center;
+			font-family: @font-major;
+			h1{
+				font-size: @major-size;
+			}
+			h2{
+				font-size:@secondary-size;
+			}
+			p{
+				font-size: @third-size;
+			}
+			a{
+				.button-basics();
+				.dropshadow();
+				display: inline-block;
+				margin: @top-gap auto;
+				padding: @gen-padding;
+				font-size: @secondary-size;
+				width: 70%;
+				&:hover{
+					text-decoration: @bt-decor;
+				}
+				
+			}
+		}
+	}
+	.middle-cont{
+		.section-box();
+		.dropshadow();
+		background-color: @box-back-alter;
+		h2{
+			font-family: @font-major;
+			font-size: @secondary-size;
+		}
+		.about{
+			padding: @gen-padding;
+			width: @split-uneven;
+				p{
+					font-family: @font-alt;
+					margin-top: @top-gap;
+				}
+		}
+		.the-goods{
+			padding: @gen-padding;
+			font-family: @font-alt;
+			ul{
+				margin-top: @top-gap;
+				margin-left:@gen-padding;
+				list-style-type:square;
+			}
+		}
+	}	
+	.bot-cont{
+		.section-box();
+		.dropshadow();
+		flex-flow: column;
+		background-color: @box-background;
+		h1{
+			font-family: @font-major;
+			font-size: @secondary-size;
+		}
+		hr{
+			width: 100%;
+		}
+		.work-history{
+		.tab-border();	
+		}
+	}
+	.contact{
+		display: flex;
+		flex-flow: column;
+		.section-box();
+		.dropshadow();
+		background-color: @box-back-alter;
+		h1{
+			font-family: @font-alt;
+			font-size: @major-size;
+			text-decoration: none;
+		}
+		#email{
+			color: black;
+		.contact-info{
+			.tab-border();
+		}
+	}
+	footer{
+		.section-box();
+		.dropshadow();
+		// margin-top: @top-gap;
+		// padding: @gen-padding;
+		text-align: center;
+		background-color:@box-background;
+	}
+}
+}
+@media (max-width:500px){
+	.container1{
+		.container-mobile();
+		.header{
+			nav{
+				margin-right:auto;
+				margin-left:auto;
+				width:100%;
+			}
+		}
+		.top-cont{
+			img{
+				display: none;
+			}
+			.top-text{
+				width:100%;
+			}
+		}
+	}
+	
+}
